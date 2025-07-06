@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -58,8 +57,8 @@ const Index = () => {
       </div>
 
       {/* Desktop Hero Section */}
-      <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-20">
-        {/* Main Content */}
+      <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-32">
+        {/* Main Content - moved down with pt-32 instead of pt-20 */}
         <div className="text-center z-10 max-w-4xl mx-auto">
           {/* Logo/Brand */}
           <div className="mb-8">
@@ -84,9 +83,11 @@ const Index = () => {
           </div>
 
           {/* Download Buttons */}
-          <DownloadButtons />
+          <div className="mb-16">
+            <DownloadButtons />
+          </div>
 
-          {/* Scroll Indicator */}
+          {/* Scroll Indicator - positioned 2cm (50px) below download buttons */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ArrowDown className="w-6 h-6 text-white/60" />
           </div>
@@ -172,4 +173,3 @@ const Index = () => {
 };
 
 export default Index;
-
