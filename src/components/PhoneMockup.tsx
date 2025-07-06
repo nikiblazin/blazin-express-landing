@@ -1,11 +1,12 @@
 
 import { useState, useEffect } from "react";
+import { Heart } from "lucide-react";
 
 const fashionPosts = [
   {
     id: 1,
     username: "@FashionGuru",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=600&fit=crop",
+    image: "/lovable-uploads/632ef365-b505-409b-918b-d4b739bfffc2.png",
     title: "Minimalist autumn look",
     description: "#minimal #cozy #fall",
     likes: "1,924",
@@ -83,7 +84,7 @@ export const PhoneMockup = () => {
   return (
     <div className="relative">
       {/* Phone Frame */}
-      <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-gray-800">
+      <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-white/20">
         <div className="w-full h-full bg-black rounded-[2.5rem] overflow-hidden relative">
           {/* Phone Notch */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-20"></div>
@@ -98,107 +99,114 @@ export const PhoneMockup = () => {
             </div>
           </div>
 
-          {/* App Header */}
+          {/* App Header - Centered tabs */}
           <div className="absolute top-12 left-0 right-0 z-10 bg-black/90 backdrop-blur-sm p-4">
-            <div className="flex items-center justify-between">
-              <div className="flex gap-6">
-                <span className="text-white font-semibold text-lg border-b-2 border-white pb-1">Neked</span>
-                <span className="text-gray-400 font-semibold text-lg">Követés</span>
-              </div>
+            <div className="flex items-center justify-center gap-8">
+              <span className="text-white font-semibold text-lg border-b-2 border-white pb-1">Neked</span>
+              <span className="text-white/60 font-semibold text-lg">Követés</span>
             </div>
           </div>
 
           {/* Feed Content */}
-          <div className="pt-24 h-full">
-            <div 
-              className="transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${currentIndex * 100}%)` }}
-            >
-              {fashionPosts.map((post, index) => (
-                <div key={post.id} className="h-full relative">
-                  {/* Background Image */}
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                  
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
-                  
-                  {/* User Info */}
-                  <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                      <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
-                    </div>
-                    <span className="text-white font-semibold text-sm">{post.username}</span>
+          <div className="pt-24 h-full overflow-hidden">
+            {fashionPosts.map((post, index) => (
+              <div 
+                key={post.id} 
+                className="absolute inset-0 pt-24 transition-transform duration-500 ease-in-out"
+                style={{ 
+                  transform: `translateY(${(index - currentIndex) * 100}%)`,
+                  opacity: index === currentIndex ? 1 : 0.3
+                }}
+              >
+                {/* Background Image */}
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                
+                {/* User Info */}
+                <div className="absolute top-4 left-4 flex items-center gap-2">
+                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-black rounded-full"></div>
                   </div>
+                  <span className="text-white font-semibold text-sm">{post.username}</span>
+                </div>
 
-                  {/* Side Actions */}
-                  <div className="absolute right-4 bottom-40 flex flex-col gap-6">
-                    <div className="flex flex-col items-center">
-                      <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <span className="text-white text-xl">♡</span>
-                      </button>
-                      <span className="text-white text-xs mt-1">{post.likes}</span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <span className="text-white text-xl">💬</span>
-                      </button>
-                      <span className="text-white text-xs mt-1">{post.comments}</span>
-                    </div>
+                {/* NY with heart icon - bottom left */}
+                <div className="absolute bottom-20 left-4 flex items-center gap-2">
+                  <Heart className="w-4 h-4 text-white fill-white" />
+                  <span className="text-white font-semibold text-sm">NY</span>
+                </div>
+
+                {/* Side Actions */}
+                <div className="absolute right-4 bottom-40 flex flex-col gap-6">
+                  <div className="flex flex-col items-center">
                     <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <span className="text-white text-xl">↗</span>
+                      <Heart className="w-6 h-6 text-white" />
                     </button>
-                    <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <span className="text-white text-xl">🔖</span>
-                    </button>
+                    <span className="text-white text-xs mt-1">{post.likes}</span>
                   </div>
+                  <div className="flex flex-col items-center">
+                    <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <span className="text-white text-xl">💬</span>
+                    </button>
+                    <span className="text-white text-xs mt-1">{post.comments}</span>
+                  </div>
+                  <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <span className="text-white text-xl">↗</span>
+                  </button>
+                  <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <span className="text-white text-xl">🔖</span>
+                  </button>
+                </div>
+                
+                {/* Content Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h3 className="font-bold text-lg mb-1">{post.title}</h3>
+                  <p className="text-white/80 text-sm mb-4">{post.description}</p>
                   
-                  {/* Content Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <h3 className="font-bold text-lg mb-1">{post.title}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{post.description}</p>
-                    
-                    {/* Shopping Items */}
-                    <div className="flex gap-3 mb-4">
-                      {post.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="bg-black/60 backdrop-blur-sm rounded-xl p-3 min-w-[120px]">
-                          <div className="w-16 h-16 bg-gray-600 rounded-lg mb-2"></div>
-                          <h4 className="text-white text-sm font-semibold">{item.name}</h4>
-                          <p className="text-gray-300 text-xs">{item.price}</p>
-                        </div>
-                      ))}
-                    </div>
+                  {/* Shopping Items */}
+                  <div className="flex gap-3 mb-4">
+                    {post.items.map((item, itemIndex) => (
+                      <div key={itemIndex} className="bg-black/60 backdrop-blur-sm rounded-xl p-3 min-w-[120px]">
+                        <div className="w-16 h-16 bg-white/20 rounded-lg mb-2"></div>
+                        <h4 className="text-white text-sm font-semibold">{item.name}</h4>
+                        <p className="text-white/80 text-xs">{item.price}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Bottom Navigation */}
+          {/* Bottom Navigation - Updated icons based on the image */}
           <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm p-4">
             <div className="flex justify-around">
               <div className="flex flex-col items-center">
-                <span className="text-lg">🏠</span>
+                <div className="w-6 h-6 bg-white rounded-sm mb-1"></div>
                 <span className="text-xs text-white">Home</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-lg">🔍</span>
-                <span className="text-xs text-gray-400">Discover</span>
+                <div className="w-6 h-6 border-2 border-white/60 rounded-full mb-1"></div>
+                <span className="text-xs text-white/60">Search</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-lg">➕</span>
-                <span className="text-xs text-gray-400">Post</span>
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center mb-1">
+                  <span className="text-black text-lg font-bold">+</span>
+                </div>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-lg">💬</span>
-                <span className="text-xs text-gray-400">Messages</span>
+                <Heart className="w-6 h-6 text-white/60 mb-1" />
+                <span className="text-xs text-white/60">Liked</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-lg">👤</span>
-                <span className="text-xs text-gray-400">Profile</span>
+                <div className="w-6 h-6 bg-white/60 rounded-full mb-1"></div>
+                <span className="text-xs text-white/60">Profile</span>
               </div>
             </div>
           </div>
@@ -207,7 +215,7 @@ export const PhoneMockup = () => {
 
       {/* Floating Elements */}
       <div className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full animate-pulse"></div>
-      <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gray-400 rounded-full animate-pulse"></div>
+      <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/60 rounded-full animate-pulse"></div>
     </div>
   );
 };
