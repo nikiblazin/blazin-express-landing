@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
 
@@ -192,8 +193,7 @@ export const PhoneMockup = () => {
         </div>
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full animate-pulse"></div>
+      {/* Floating Elements - removed top-right circle, kept only bottom-left */}
       <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/60 rounded-full animate-pulse"></div>
     </div>
   );
