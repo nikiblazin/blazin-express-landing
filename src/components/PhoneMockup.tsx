@@ -179,28 +179,14 @@ export const PhoneMockup = () => {
 
           {/* Bottom Navigation */}
           <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm p-4">
-            <div className="flex justify-around">
-              <div className="flex flex-col items-center">
-                <div className="w-6 h-6 bg-white rounded-sm mb-1"></div>
-                <span className="text-xs text-white">Home</span>
+            <div className="flex justify-around items-center">
+              <div className="w-6 h-6 bg-white rounded-sm"></div>
+              <div className="w-6 h-6 border-2 border-white/60 rounded-full"></div>
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                <span className="text-black text-lg font-bold">+</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="w-6 h-6 border-2 border-white/60 rounded-full mb-1"></div>
-                <span className="text-xs text-white/60">Discovery</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center mb-1">
-                  <span className="text-black text-lg font-bold">+</span>
-                </div>
-              </div>
-              <div className="flex flex-col items-center">
-                <Heart className="w-6 h-6 text-white/60 mb-1" />
-                <span className="text-xs text-white/60">Liked</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-6 h-6 bg-white/60 rounded-full mb-1"></div>
-                <span className="text-xs text-white/60">Profile</span>
-              </div>
+              <Heart className="w-6 h-6 text-white/60" />
+              <div className="w-6 h-6 bg-white/60 rounded-full"></div>
             </div>
           </div>
         </div>
