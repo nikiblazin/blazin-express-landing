@@ -57,8 +57,8 @@ const Index = () => {
       </div>
 
       {/* Desktop Hero Section */}
-      <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-32">
-        {/* Main Content - moved down with pt-32 instead of pt-20 */}
+      <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-48">
+        {/* Main Content - moved down even further with pt-48 instead of pt-32 */}
         <div className="text-center z-10 max-w-4xl mx-auto">
           {/* Logo/Brand */}
           <div className="mb-8">
@@ -83,7 +83,7 @@ const Index = () => {
           </div>
 
           {/* Download Buttons */}
-          <div className="mb-16">
+          <div className="mb-20">
             <DownloadButtons />
           </div>
 
