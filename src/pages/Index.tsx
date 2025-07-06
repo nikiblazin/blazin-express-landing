@@ -57,42 +57,37 @@ const Index = () => {
       </div>
 
       {/* Desktop Hero Section */}
-      <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-20">
-        {/* Main Content */}
-        <div className="text-center z-10 max-w-4xl mx-auto">
+      <div className="hidden lg:flex relative min-h-screen items-center justify-between px-8 xl:px-16">
+        {/* Left Content */}
+        <div className="flex-1 max-w-2xl">
           {/* Logo/Brand */}
           <div className="mb-8">
-            <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
+            <h1 className="text-7xl xl:text-8xl font-black tracking-tight mb-4 text-white">
               BLAZIN
             </h1>
-            <div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
+            <div className="w-32 h-1 bg-cyan-400 rounded-full"></div>
           </div>
 
           {/* Main Headline */}
-          <div className="mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+          <div className="mb-12">
+            <h2 className="text-4xl xl:text-5xl font-bold mb-8 leading-tight text-white">
               XPRESS YOURSELF
             </h2>
-            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg xl:text-xl text-white leading-relaxed mb-6">
               Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
               spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
             </p>
-            <p className="text-lg md:text-xl text-white font-semibold">
+            <p className="text-lg xl:text-xl text-cyan-400 font-semibold mb-12">
               Get BLAZIN on your phone and squad up with our it fashion crew!
             </p>
           </div>
 
           {/* Download Buttons */}
           <DownloadButtons />
-
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="w-6 h-6 text-white/60" />
-          </div>
         </div>
 
-        {/* Phone Mockup */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
+        {/* Right Phone Mockup */}
+        <div className="flex-shrink-0 ml-8">
           <PhoneMockup />
           {/* "With ❤️ from NY" centered below desktop mockup */}
           <div className="flex justify-center mt-8">
@@ -104,10 +99,15 @@ const Index = () => {
           </div>
         </div>
 
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown className="w-6 h-6 text-white/60" />
+        </div>
+
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl"></div>
         </div>
       </div>
 
