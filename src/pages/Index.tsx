@@ -16,7 +16,7 @@ const Index = () => {
             <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
               BLAZIN
             </h1>
-            <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-white to-gray-400 mx-auto rounded-full"></div>
           </div>
 
           {/* Main Headline */}
@@ -28,7 +28,7 @@ const Index = () => {
               Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
               spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
             </p>
-            <p className="text-lg md:text-xl text-cyan-400 font-semibold">
+            <p className="text-lg md:text-xl text-white font-semibold">
               Get BLAZIN on your phone and squad up with our it fashion crew!
             </p>
           </div>
@@ -49,8 +49,8 @@ const Index = () => {
 
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-500/10 rounded-full blur-3xl"></div>
         </div>
       </div>
 
@@ -65,25 +65,25 @@ const Index = () => {
       <div className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
+            <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-black">⚡</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Lightning Fast</h3>
               <p className="text-gray-400">Get your fashion fix delivered in 3 hours or less in NYC</p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔥</span>
+            <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-black">🔥</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Trending Styles</h3>
               <p className="text-gray-400">Discover the latest fashion trends from top creators</p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💫</span>
+            <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-black">💫</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Squad Goals</h3>
               <p className="text-gray-400">Connect with fashion creators and build your network</p>
