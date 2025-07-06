@@ -44,7 +44,7 @@ const Index = () => {
         </div>
 
         {/* Download Buttons */}
-        <DownloadButtons />
+        <DownloadButtons variant="buttons" />
 
         {/* "With ❤️ from NY" */}
         <div className="flex justify-center mt-8 mb-12">
@@ -84,7 +84,7 @@ const Index = () => {
 
           {/* Download Buttons */}
           <div className="mb-20">
-            <DownloadButtons />
+            <DownloadButtons variant="buttons" />
           </div>
 
           {/* Scroll Indicator - positioned 2cm (50px) below download buttons */}
