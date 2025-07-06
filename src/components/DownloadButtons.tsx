@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -20,8 +19,8 @@ export const DownloadButtons = ({ variant = 'icons' }: DownloadButtonsProps) => 
             </svg>
           </div>
           <div className="text-left">
-            <div className="text-xs text-gray-600 hidden sm:block">Download on the</div>
-            <div className="font-bold text-xs sm:text-sm">App Store</div>
+            <div className="text-xs sm:text-sm text-gray-600">Download on the</div>
+            <div className="font-bold text-sm sm:text-base">App Store</div>
           </div>
         </Button>
 
@@ -35,8 +34,8 @@ export const DownloadButtons = ({ variant = 'icons' }: DownloadButtonsProps) => 
             </svg>
           </div>
           <div className="text-left">
-            <div className="text-xs text-gray-600 hidden sm:block">Get it on</div>
-            <div className="font-bold text-xs sm:text-sm">Google Play</div>
+            <div className="text-xs sm:text-sm text-gray-600">Get it on</div>
+            <div className="font-bold text-sm sm:text-base">Google Play</div>
           </div>
         </Button>
       </div>
