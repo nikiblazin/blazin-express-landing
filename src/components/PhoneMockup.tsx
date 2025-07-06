@@ -101,8 +101,8 @@ export const PhoneMockup = () => {
           {/* App Header - Centered tabs */}
           <div className="absolute top-12 left-0 right-0 z-10 bg-black/90 backdrop-blur-sm p-4">
             <div className="flex items-center justify-center gap-8">
-              <span className="text-white font-semibold text-lg border-b-2 border-white pb-1">Neked</span>
-              <span className="text-white/60 font-semibold text-lg">Követés</span>
+              <span className="text-white font-semibold text-lg border-b-2 border-white pb-1">For You</span>
+              <span className="text-white/60 font-semibold text-lg">Following</span>
             </div>
           </div>
 
