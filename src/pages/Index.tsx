@@ -148,7 +148,8 @@ const Index = () => {
       <div className="py-20 px-4 text-center">
         <h3 className="text-3xl md:text-4xl font-bold mb-6">Ready to get BLAZIN?</h3>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-          Join thousands of fashion creators who are already expressing themselves on BLAZIN
+          Born in NY. Built for fashion obsessives, by fashion insiders.
+          Join the next wave of style legends and own your look.
         </p>
         <DownloadButtons />
 
