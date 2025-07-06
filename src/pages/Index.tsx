@@ -47,15 +47,6 @@ const Index = () => {
           <PhoneMockup />
         </div>
 
-        {/* "with ❤️ from NY" - Bottom right corner */}
-        <div className="absolute bottom-8 right-8 hidden lg:block">
-          <div className="flex items-center gap-2 text-white/80">
-            <span className="text-sm">with</span>
-            <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-            <span className="text-sm">from NY</span>
-          </div>
-        </div>
-
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
@@ -68,13 +59,22 @@ const Index = () => {
         <div className="flex justify-center">
           <PhoneMockup />
         </div>
-        {/* "with ❤️ from NY" for mobile */}
+        {/* "With ❤️ from NY" centered below mockup */}
         <div className="flex justify-center mt-8">
-          <div className="flex items-center gap-2 text-white/80">
-            <span className="text-sm">with</span>
+          <div className="flex items-center gap-2 text-white">
+            <span className="text-sm">With</span>
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             <span className="text-sm">from NY</span>
           </div>
+        </div>
+      </div>
+
+      {/* Desktop - "With ❤️ from NY" centered below mockup */}
+      <div className="hidden lg:block absolute right-8 top-1/2 transform -translate-y-1/2 translate-y-80">
+        <div className="flex items-center gap-2 text-white justify-center">
+          <span className="text-sm">With</span>
+          <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+          <span className="text-sm">from NY</span>
         </div>
       </div>
 
