@@ -163,9 +163,9 @@ const Index = () => {
           </button>
           <button 
             className="text-gray-400 hover:text-white transition-colors text-sm"
-            onClick={() => console.log('Terms of Conditions clicked')}
+            onClick={() => console.log('Terms & Conditions clicked')}
           >
-            Terms of Conditions
+            Terms & Conditions
           </button>
         </div>
       </div>
