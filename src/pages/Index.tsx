@@ -34,7 +34,7 @@ const Index = () => {
 
         {/* Description Text */}
         <div className="text-center mb-8">
-          <p className="text-lg text-white max-w-3xl mx-auto leading-relaxed mb-4">
+          <p className="text-lg text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold">
             Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
             spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
           </p>
@@ -73,7 +73,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               XPRESS YOURSELF
             </h2>
-            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold">
               Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
               spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
             </p>
