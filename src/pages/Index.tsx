@@ -60,25 +60,25 @@ const Index = () => {
       <div className="hidden lg:block relative min-h-screen">
         <div className="grid grid-cols-2 h-screen">
           {/* Left Side - Content */}
-          <div className="flex flex-col justify-center px-16 py-20 pt-32">
+          <div className="flex flex-col justify-center items-center px-16 py-20 pt-40">
             {/* Logo/Brand */}
-            <div className="mb-12">
+            <div className="mb-12 text-center">
               <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
                 BLAZIN
               </h1>
-              <div className="w-32 h-1 bg-white rounded-full"></div>
+              <div className="w-32 h-1 bg-white rounded-full mx-auto"></div>
             </div>
 
             {/* Main Headline */}
-            <div className="mb-12">
+            <div className="mb-12 text-center">
               <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
                 XPRESS YOURSELF
               </h2>
-              <p className="text-lg md:text-xl text-white leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-white leading-relaxed mb-8 max-w-lg">
                 Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
                 spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
               </p>
-              <p className="text-lg md:text-xl text-white font-semibold mb-12">
+              <p className="text-lg md:text-xl text-white font-semibold mb-12 max-w-lg">
                 Get BLAZIN on your phone and squad up with our it fashion crew!
               </p>
             </div>
