@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -35,6 +34,22 @@ const Index = () => {
 
           {/* Download Buttons */}
           <DownloadButtons />
+
+          {/* Privacy Policy & Terms */}
+          <div className="flex justify-center gap-8 mb-12">
+            <button 
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+              onClick={() => console.log('Privacy Policy clicked')}
+            >
+              Privacy Policy
+            </button>
+            <button 
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+              onClick={() => console.log('Terms of Conditions clicked')}
+            >
+              Terms of Conditions
+            </button>
+          </div>
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -115,24 +130,6 @@ const Index = () => {
           Join thousands of fashion creators who are already expressing themselves on BLAZIN
         </p>
         <DownloadButtons />
-      </div>
-
-      {/* Footer */}
-      <div className="py-8 px-4 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto flex justify-center gap-8">
-          <button 
-            className="text-gray-400 hover:text-white transition-colors text-sm underline"
-            onClick={() => console.log('Privacy Policy clicked')}
-          >
-            Privacy Policy
-          </button>
-          <button 
-            className="text-gray-400 hover:text-white transition-colors text-sm underline"
-            onClick={() => console.log('Terms of Conditions clicked')}
-          >
-            Terms of Conditions
-          </button>
-        </div>
       </div>
     </div>
   );
