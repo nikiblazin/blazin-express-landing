@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -58,51 +57,55 @@ const Index = () => {
       </div>
 
       {/* Desktop Hero Section */}
-      <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-20">
-        {/* Main Content */}
-        <div className="text-center z-10 max-w-4xl mx-auto">
-          {/* Logo/Brand */}
-          <div className="mb-8">
-            <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
-              BLAZIN
-            </h1>
-            <div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
+      <div className="hidden lg:block relative min-h-screen">
+        <div className="grid grid-cols-2 h-screen">
+          {/* Left Side - Content */}
+          <div className="flex flex-col justify-center px-16 py-20">
+            {/* Logo/Brand */}
+            <div className="mb-12">
+              <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
+                BLAZIN
+              </h1>
+              <div className="w-32 h-1 bg-white rounded-full"></div>
+            </div>
+
+            {/* Main Headline */}
+            <div className="mb-12">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                XPRESS YOURSELF
+              </h2>
+              <p className="text-lg md:text-xl text-white leading-relaxed mb-8">
+                Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
+                spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
+              </p>
+              <p className="text-lg md:text-xl text-white font-semibold mb-12">
+                Get BLAZIN on your phone and squad up with our it fashion crew!
+              </p>
+            </div>
+
+            {/* Download Buttons with proper spacing from scroll arrow */}
+            <div className="mb-20">
+              <DownloadButtons />
+            </div>
           </div>
 
-          {/* Main Headline */}
-          <div className="mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-              XPRESS YOURSELF
-            </h2>
-            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8">
-              Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
-              spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
-            </p>
-            <p className="text-lg md:text-xl text-white font-semibold">
-              Get BLAZIN on your phone and squad up with our it fashion crew!
-            </p>
-          </div>
-
-          {/* Download Buttons */}
-          <DownloadButtons />
-
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="w-6 h-6 text-white/60" />
+          {/* Right Side - Phone Mockup */}
+          <div className="flex items-center justify-center relative">
+            <PhoneMockup />
+            {/* "With ❤️ from NY" centered below desktop mockup */}
+            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
+              <div className="flex items-center gap-2 text-white">
+                <span className="text-sm">With</span>
+                <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+                <span className="text-sm">from NY</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Phone Mockup */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
-          <PhoneMockup />
-          {/* "With ❤️ from NY" centered below desktop mockup */}
-          <div className="flex justify-center mt-8">
-            <div className="flex items-center gap-2 text-white">
-              <span className="text-sm">With</span>
-              <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-              <span className="text-sm">from NY</span>
-            </div>
-          </div>
+        {/* Scroll Indicator - positioned at bottom */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown className="w-6 h-6 text-white/60" />
         </div>
 
         {/* Background Effects */}
@@ -172,4 +175,3 @@ const Index = () => {
 };
 
 export default Index;
-
