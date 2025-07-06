@@ -1,7 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Heart } from "lucide-react";
 
 const Index = () => {
   return (
@@ -46,6 +47,15 @@ const Index = () => {
           <PhoneMockup />
         </div>
 
+        {/* "with ❤️ from NY" - Bottom right corner */}
+        <div className="absolute bottom-8 right-8 hidden lg:block">
+          <div className="flex items-center gap-2 text-white/80">
+            <span className="text-sm">with</span>
+            <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+            <span className="text-sm">from NY</span>
+          </div>
+        </div>
+
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
@@ -57,6 +67,14 @@ const Index = () => {
       <div className="lg:hidden py-20 px-4">
         <div className="flex justify-center">
           <PhoneMockup />
+        </div>
+        {/* "with ❤️ from NY" for mobile */}
+        <div className="flex justify-center mt-8">
+          <div className="flex items-center gap-2 text-white/80">
+            <span className="text-sm">with</span>
+            <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+            <span className="text-sm">from NY</span>
+          </div>
         </div>
       </div>
 

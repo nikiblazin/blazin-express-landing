@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
 
@@ -136,12 +135,6 @@ export const PhoneMockup = () => {
                   <span className="text-white font-semibold text-sm">{post.username}</span>
                 </div>
 
-                {/* NY with heart icon - bottom left */}
-                <div className="absolute bottom-32 left-4 flex items-center gap-2 z-20">
-                  <Heart className="w-4 h-4 text-white fill-white" />
-                  <span className="text-white font-semibold text-sm">NY</span>
-                </div>
-
                 {/* Side Actions */}
                 <div className="absolute right-4 bottom-40 flex flex-col gap-6">
                   <div className="flex flex-col items-center">
@@ -193,7 +186,7 @@ export const PhoneMockup = () => {
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-6 h-6 border-2 border-white/60 rounded-full mb-1"></div>
-                <span className="text-xs text-white/60">Search</span>
+                <span className="text-xs text-white/60">Discovery</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center mb-1">
