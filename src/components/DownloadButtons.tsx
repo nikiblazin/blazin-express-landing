@@ -9,7 +9,7 @@ interface DownloadButtonsProps {
 export const DownloadButtons = ({ variant = 'icons' }: DownloadButtonsProps) => {
   if (variant === 'buttons') {
     return (
-      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-12">
+      <div className="flex flex-row gap-4 items-center justify-center mb-12">
         <Button 
           className="bg-white text-black hover:bg-gray-100 transition-all duration-300 px-8 py-6 rounded-2xl text-lg font-semibold flex items-center gap-3 hover:scale-105 w-full sm:w-auto"
           onClick={() => window.open('https://apps.apple.com/', '_blank')}
@@ -44,7 +44,7 @@ export const DownloadButtons = ({ variant = 'icons' }: DownloadButtonsProps) => 
   }
 
   return (
-    <div className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-12">
+    <div className="flex flex-row gap-6 items-center justify-center mb-12">
       {/* Apple App Store Icon */}
       <div 
         className="cursor-pointer hover:scale-110 transition-transform duration-300"
