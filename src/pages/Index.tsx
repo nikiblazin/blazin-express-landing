@@ -35,22 +35,6 @@ const Index = () => {
           {/* Download Buttons */}
           <DownloadButtons />
 
-          {/* Privacy Policy & Terms */}
-          <div className="flex justify-center gap-8 mb-12">
-            <button 
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-              onClick={() => console.log('Privacy Policy clicked')}
-            >
-              Privacy Policy
-            </button>
-            <button 
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-              onClick={() => console.log('Terms of Conditions clicked')}
-            >
-              Terms of Conditions
-            </button>
-          </div>
-
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ArrowDown className="w-6 h-6 text-white/60" />
@@ -130,6 +114,22 @@ const Index = () => {
           Join thousands of fashion creators who are already expressing themselves on BLAZIN
         </p>
         <DownloadButtons />
+
+        {/* Privacy Policy & Terms */}
+        <div className="flex justify-center gap-8">
+          <button 
+            className="text-gray-400 hover:text-white transition-colors text-sm"
+            onClick={() => console.log('Privacy Policy clicked')}
+          >
+            Privacy Policy
+          </button>
+          <button 
+            className="text-gray-400 hover:text-white transition-colors text-sm"
+            onClick={() => console.log('Terms of Conditions clicked')}
+          >
+            Terms of Conditions
+          </button>
+        </div>
       </div>
     </div>
   );
