@@ -60,7 +60,7 @@ const Index = () => {
       <div className="hidden lg:block relative min-h-screen">
         <div className="grid grid-cols-2 h-screen">
           {/* Left Side - Content */}
-          <div className="flex flex-col justify-center px-16 py-20">
+          <div className="flex flex-col justify-center px-16 py-20 pt-32">
             {/* Logo/Brand */}
             <div className="mb-12">
               <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
@@ -83,8 +83,8 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Download Buttons with proper spacing from scroll arrow */}
-            <div className="mb-20">
+            {/* Download Buttons with proper spacing from scroll arrow - 2cm (50px) above scroll arrow */}
+            <div className="mb-[50px]">
               <DownloadButtons />
             </div>
           </div>
