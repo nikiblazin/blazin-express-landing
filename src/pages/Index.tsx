@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -6,8 +7,57 @@ import { ArrowDown, Heart } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Hero Section */}
-      <div className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20">
+      {/* Mobile Header - BeReal Style */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 pt-8">
+        <h1 className="text-2xl font-black text-white">BLAZIN</h1>
+        <Button 
+          className="bg-white text-black hover:bg-gray-100 transition-all duration-300 px-4 py-2 rounded-full text-sm font-semibold"
+          onClick={() => window.open('https://apps.apple.com/', '_blank')}
+        >
+          Get the app
+        </Button>
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="lg:hidden pt-20 px-4 min-h-screen">
+        {/* Main Headline */}
+        <div className="text-center mb-8">
+          <h2 className="text-4xl font-bold mb-6 leading-tight text-white">
+            XPRESS YOURSELF
+          </h2>
+        </div>
+
+        {/* Phone Mockup */}
+        <div className="flex justify-center mb-8">
+          <PhoneMockup />
+        </div>
+
+        {/* Description Text */}
+        <div className="text-center mb-8">
+          <p className="text-lg text-white max-w-3xl mx-auto leading-relaxed mb-4">
+            Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
+            spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
+          </p>
+          <p className="text-lg text-white font-semibold mb-8">
+            Get BLAZIN on your phone and squad up with our it fashion crew!
+          </p>
+        </div>
+
+        {/* Download Buttons */}
+        <DownloadButtons />
+
+        {/* "With ❤️ from NY" */}
+        <div className="flex justify-center mt-8 mb-12">
+          <div className="flex items-center gap-2 text-white">
+            <span className="text-sm">With</span>
+            <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+            <span className="text-sm">from NY</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Hero Section */}
+      <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-20">
         {/* Main Content */}
         <div className="text-center z-10 max-w-4xl mx-auto">
           {/* Logo/Brand */}
@@ -42,7 +92,7 @@ const Index = () => {
         </div>
 
         {/* Phone Mockup */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
           <PhoneMockup />
           {/* "With ❤️ from NY" centered below desktop mockup */}
           <div className="flex justify-center mt-8">
@@ -58,21 +108,6 @@ const Index = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-        </div>
-      </div>
-
-      {/* Mobile Phone Section */}
-      <div className="lg:hidden py-20 px-4">
-        <div className="flex justify-center">
-          <PhoneMockup />
-        </div>
-        {/* "With ❤️ from NY" centered below mobile mockup */}
-        <div className="flex justify-center mt-8">
-          <div className="flex items-center gap-2 text-white">
-            <span className="text-sm">With</span>
-            <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-            <span className="text-sm">from NY</span>
-          </div>
         </div>
       </div>
 
