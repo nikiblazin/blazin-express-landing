@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -13,18 +12,18 @@ const Index = () => {
         <div className="text-center z-10 max-w-4xl mx-auto">
           {/* Logo/Brand */}
           <div className="mb-8">
-            <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+            <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
               BLAZIN
             </h1>
-            <div className="w-32 h-1 bg-gradient-to-r from-white to-gray-400 mx-auto rounded-full"></div>
+            <div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
           </div>
 
           {/* Main Headline */}
           <div className="mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               XPRESS YOURSELF
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8">
               Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
               spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
             </p>
@@ -38,7 +37,7 @@ const Index = () => {
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="w-6 h-6 text-gray-400" />
+            <ArrowDown className="w-6 h-6 text-white/60" />
           </div>
         </div>
 
@@ -50,7 +49,7 @@ const Index = () => {
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
         </div>
       </div>
 

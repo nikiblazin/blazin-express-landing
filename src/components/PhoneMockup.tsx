@@ -137,7 +137,7 @@ export const PhoneMockup = () => {
                 </div>
 
                 {/* NY with heart icon - bottom left */}
-                <div className="absolute bottom-20 left-4 flex items-center gap-2">
+                <div className="absolute bottom-32 left-4 flex items-center gap-2 z-20">
                   <Heart className="w-4 h-4 text-white fill-white" />
                   <span className="text-white font-semibold text-sm">NY</span>
                 </div>
@@ -184,7 +184,7 @@ export const PhoneMockup = () => {
             ))}
           </div>
 
-          {/* Bottom Navigation - Updated icons based on the image */}
+          {/* Bottom Navigation */}
           <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm p-4">
             <div className="flex justify-around">
               <div className="flex flex-col items-center">
