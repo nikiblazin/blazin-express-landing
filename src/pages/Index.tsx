@@ -119,26 +119,26 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-black">⚡</span>
+                <span className="text-2xl text-black">📲</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">Lightning Fast</h3>
-              <p className="text-gray-400">Get your fashion fix delivered in 3 hours or less in NYC</p>
+              <h3 className="text-xl font-bold mb-3">Scroll it</h3>
+              <p className="text-gray-400">Browse fashion videos curated for your vibe.</p>
+            </div>
+
+            <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl text-black">🛒</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Shop it</h3>
+              <p className="text-gray-400">Tap to buy the full fit, delivered in hours (NYC).</p>
             </div>
 
             <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-black">🔥</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">Trending Styles</h3>
-              <p className="text-gray-400">Discover the latest fashion trends from top creators</p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-black">💫</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Squad Goals</h3>
-              <p className="text-gray-400">Connect with fashion creators and build your network</p>
+              <h3 className="text-xl font-bold mb-3">Drop it</h3>
+              <p className="text-gray-400">Upload your own look and become a trendsetter.</p>
             </div>
           </div>
         </div>
