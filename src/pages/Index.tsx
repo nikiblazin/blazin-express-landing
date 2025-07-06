@@ -47,7 +47,7 @@ const Index = () => {
         <DownloadButtons variant="buttons" />
 
         {/* "With ❤️ from NY" */}
-        <div className="flex justify-center mt-8 mb-12">
+        <div className="flex justify-center mt-8 mb-20">
           <div className="flex items-center gap-2 text-white">
             <span className="text-sm">With</span>
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
