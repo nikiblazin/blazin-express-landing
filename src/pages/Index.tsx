@@ -45,6 +45,14 @@ const Index = () => {
         {/* Phone Mockup */}
         <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
           <PhoneMockup />
+          {/* "With ❤️ from NY" centered below desktop mockup */}
+          <div className="flex justify-center mt-8">
+            <div className="flex items-center gap-2 text-white">
+              <span className="text-sm">With</span>
+              <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+              <span className="text-sm">from NY</span>
+            </div>
+          </div>
         </div>
 
         {/* Background Effects */}
@@ -59,22 +67,13 @@ const Index = () => {
         <div className="flex justify-center">
           <PhoneMockup />
         </div>
-        {/* "With ❤️ from NY" centered below mockup */}
+        {/* "With ❤️ from NY" centered below mobile mockup */}
         <div className="flex justify-center mt-8">
           <div className="flex items-center gap-2 text-white">
             <span className="text-sm">With</span>
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             <span className="text-sm">from NY</span>
           </div>
-        </div>
-      </div>
-
-      {/* Desktop - "With ❤️ from NY" centered below mockup */}
-      <div className="hidden lg:block absolute right-8 top-1/2 transform -translate-y-1/2 translate-y-80">
-        <div className="flex items-center gap-2 text-white justify-center">
-          <span className="text-sm">With</span>
-          <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-          <span className="text-sm">from NY</span>
         </div>
       </div>
 
@@ -116,6 +115,24 @@ const Index = () => {
           Join thousands of fashion creators who are already expressing themselves on BLAZIN
         </p>
         <DownloadButtons />
+      </div>
+
+      {/* Footer */}
+      <div className="py-8 px-4 border-t border-gray-800">
+        <div className="max-w-6xl mx-auto flex justify-center gap-8">
+          <button 
+            className="text-gray-400 hover:text-white transition-colors text-sm underline"
+            onClick={() => console.log('Privacy Policy clicked')}
+          >
+            Privacy Policy
+          </button>
+          <button 
+            className="text-gray-400 hover:text-white transition-colors text-sm underline"
+            onClick={() => console.log('Terms of Conditions clicked')}
+          >
+            Terms of Conditions
+          </button>
+        </div>
       </div>
     </div>
   );
