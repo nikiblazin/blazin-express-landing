@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -23,7 +22,7 @@ const Index = () => {
       <div className="lg:hidden pt-24 px-4 min-h-screen">
         {/* Main Headline */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold leading-tight text-white">
+          <h2 className="text-4xl font-bold leading-tight text-white mb-8">
             XPRESS<br />YOURSELF
           </h2>
         </div>
@@ -172,4 +171,3 @@ const Index = () => {
 };
 
 export default Index;
-
