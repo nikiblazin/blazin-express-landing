@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
+import { BottomNavigation } from "./phone/BottomNavigation";
 
 const fashionPosts = [
   {
@@ -179,23 +180,9 @@ export const PhoneMockup = () => {
           </div>
 
           {/* Bottom Navigation */}
-          <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm p-4">
-            <div className="flex justify-around items-center">
-              <div className="w-6 h-6 bg-white rounded-sm"></div>
-              <div className="w-6 h-6 border-2 border-white/60 rounded-full"></div>
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-black text-lg font-bold">+</span>
-              </div>
-              <Heart className="w-6 h-6 text-white/60" />
-              <div className="w-6 h-6 bg-white/60 rounded-full"></div>
-            </div>
-          </div>
+          <BottomNavigation />
         </div>
       </div>
-
-      {/* Floating Elements - top-right and bottom-left circles */}
-      <div className="absolute -top-4 -right-4 w-6 h-6 bg-white/60 rounded-full animate-pulse"></div>
-      <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/60 rounded-full animate-pulse"></div>
     </div>
   );
 };
