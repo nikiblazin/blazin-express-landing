@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
-import { Heart } from "lucide-react";
+import { Heart, Home, Search, Plus, User } from "lucide-react";
 
 const fashionPosts = [
   {
     id: 1,
-    username: "@FashionGuru",
+    username: "@TrendSetter",
     image: "/lovable-uploads/632ef365-b505-409b-918b-d4b739bfffc2.png",
-    title: "Minimalist autumn look",
-    description: "#minimal #cozy #fall",
-    likes: "1,924",
-    comments: "124",
+    title: "Gen Z vibes! ✨",
+    description: "#genz #streetstyle #trendy",
+    likes: "3,157",
+    comments: "424",
     items: [
-      { name: "Wool Coat", price: "$129" },
-      { name: "Leather Boots", price: "$95" }
+      { name: "Sequin Dress", price: "$149", image: "/lovable-uploads/69d8b2c9-1801-4b49-ab0b-105c7a12c2ff.png" },
+      { name: "Statement Earrings", price: "$29", image: "/lovable-uploads/69d8b2c9-1801-4b49-ab0b-105c7a12c2ff.png" },
+      { name: "Club Wear", price: "$89", image: "/lovable-uploads/69d8b2c9-1801-4b49-ab0b-105c7a12c2ff.png" }
     ]
   },
   {
@@ -98,20 +99,12 @@ export const PhoneMockup = () => {
             </div>
           </div>
 
-          {/* App Header - Centered tabs */}
-          <div className="absolute top-12 left-0 right-0 z-10 bg-black/90 backdrop-blur-sm p-4">
-            <div className="flex items-center justify-center gap-8">
-              <span className="text-white font-semibold text-lg border-b-2 border-white pb-1">For You</span>
-              <span className="text-white/60 font-semibold text-lg">Following</span>
-            </div>
-          </div>
-
           {/* Feed Content */}
-          <div className="pt-24 h-full overflow-hidden">
+          <div className="pt-8 h-full overflow-hidden">
             {fashionPosts.map((post, index) => (
               <div 
                 key={post.id} 
-                className="absolute inset-0 pt-24 transition-transform duration-500 ease-in-out"
+                className="absolute inset-0 pt-8 transition-transform duration-500 ease-in-out"
                 style={{ 
                   transform: `translateY(${(index - currentIndex) * 100}%)`,
                   opacity: index === currentIndex ? 1 : 0.3
@@ -125,68 +118,85 @@ export const PhoneMockup = () => {
                 />
                 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 
-                {/* User Info */}
-                <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                    <div className="w-6 h-6 bg-black rounded-full"></div>
+                {/* Top-right Trend indicator */}
+                <div className="absolute top-4 right-4 flex flex-col items-center">
+                  <div className="bg-white/90 rounded-full px-3 py-1 mb-2">
+                    <span className="text-black text-xs font-semibold">Trend</span>
                   </div>
-                  <span className="text-white font-semibold text-sm">{post.username}</span>
+                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                 </div>
 
-                {/* Side Actions */}
-                <div className="absolute right-4 bottom-40 flex flex-col gap-6">
+                {/* Side Actions - Right side icons like in the image */}
+                <div className="absolute right-4 bottom-32 flex flex-col gap-4">
                   <div className="flex flex-col items-center">
-                    <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <Heart className="w-6 h-6 text-white" />
+                    <button className="w-12 h-12 bg-transparent flex items-center justify-center">
+                      <Heart className="w-7 h-7 text-white fill-red-500" />
                     </button>
-                    <span className="text-white text-xs mt-1">{post.likes}</span>
+                    <span className="text-white text-xs font-semibold">{post.likes}</span>
                   </div>
                   <div className="flex flex-col items-center">
-                    <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <span className="text-white text-xl">💬</span>
+                    <button className="w-12 h-12 bg-transparent flex items-center justify-center">
+                      <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center">
+                        <span className="text-black text-sm">💬</span>
+                      </div>
                     </button>
-                    <span className="text-white text-xs mt-1">{post.comments}</span>
+                    <span className="text-white text-xs font-semibold">{post.comments}</span>
                   </div>
-                  <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <span className="text-white text-xl">↗</span>
+                  <button className="w-12 h-12 bg-transparent flex items-center justify-center">
+                    <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-black text-sm">↗</span>
+                    </div>
                   </button>
-                  <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <span className="text-white text-xl">🔖</span>
+                  <button className="w-12 h-12 bg-transparent flex items-center justify-center">
+                    <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-black text-sm">🔖</span>
+                    </div>
                   </button>
                 </div>
                 
-                {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-bold text-lg mb-1">{post.title}</h3>
-                  <p className="text-white/80 text-sm mb-4">{post.description}</p>
-                  
-                  {/* Shopping Items */}
-                  <div className="flex gap-3 mb-4">
-                    {post.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="bg-black/60 backdrop-blur-sm rounded-xl p-3 min-w-[120px]">
-                        <div className="w-16 h-16 bg-white/20 rounded-lg mb-2"></div>
-                        <h4 className="text-white text-sm font-semibold">{item.name}</h4>
-                        <p className="text-white/80 text-xs">{item.price}</p>
-                      </div>
-                    ))}
+                {/* Content Overlay - Username and description */}
+                <div className="absolute bottom-20 left-4 right-16 text-white">
+                  <h3 className="font-bold text-lg mb-1">{post.username}</h3>
+                  <p className="text-white text-sm mb-4">{post.title}</p>
+                  <p className="text-white/80 text-sm">{post.description}</p>
+                </div>
+                
+                {/* White Product Bar - exactly like in the image */}
+                <div className="absolute bottom-12 left-2 right-2">
+                  <div className="bg-white rounded-xl p-3">
+                    <div className="flex gap-2 overflow-x-auto">
+                      {post.items.map((item, itemIndex) => (
+                        <div key={itemIndex} className="flex-shrink-0 w-24">
+                          <div className="w-20 h-20 bg-gray-100 rounded-lg mb-2 overflow-hidden">
+                            <img 
+                              src={item.image} 
+                              alt={item.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <h4 className="text-black text-xs font-semibold truncate">{item.name}</h4>
+                          <p className="text-gray-600 text-xs font-bold">{item.price}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Bottom Navigation */}
-          <div className="absolute bottom-0 left-0 right-0 bg-black/90 backdrop-blur-sm p-4">
+          {/* Bottom Navigation - exactly like in the image */}
+          <div className="absolute bottom-0 left-0 right-0 bg-black p-4">
             <div className="flex justify-around items-center">
-              <div className="w-6 h-6 bg-white rounded-sm"></div>
-              <div className="w-6 h-6 border-2 border-white/60 rounded-full"></div>
+              <Home className="w-6 h-6 text-white" />
+              <Search className="w-6 h-6 text-white/60" />
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-black text-lg font-bold">+</span>
+                <Plus className="w-5 h-5 text-black" />
               </div>
               <Heart className="w-6 h-6 text-white/60" />
-              <div className="w-6 h-6 bg-white/60 rounded-full"></div>
+              <User className="w-6 h-6 text-white/60" />
             </div>
           </div>
         </div>
