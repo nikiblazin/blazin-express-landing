@@ -104,7 +104,7 @@ const Index = () => {
           </div>
           {/* Drops delivered text */}
           <div className="flex justify-center mt-2">
-            <span className="text-xs text-gray-400">10,000+ drops delivered.</span>
+            <span className="text-sm font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
           </div>
         </div>
 
