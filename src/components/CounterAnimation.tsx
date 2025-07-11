@@ -48,7 +48,7 @@ const CounterAnimation: React.FC<CounterAnimationProps> = ({
   };
 
   return (
-    <span className={className}>
+    <span className={`tabular-nums ${className}`}>
       {formatNumber(count)}
     </span>
   );
