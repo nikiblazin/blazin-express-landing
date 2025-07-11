@@ -48,7 +48,7 @@ const CounterAnimation: React.FC<CounterAnimationProps> = ({
   };
 
   return (
-    <span className={`inline-block tabular-nums w-[3.5rem] ${className}`}>
+    <span className={`inline-block tabular-nums min-w-[4rem] text-center ${className}`}>
       {formatNumber(count)}
     </span>
   );
