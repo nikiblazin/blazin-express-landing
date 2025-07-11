@@ -102,6 +102,10 @@ const Index = () => {
               <span className="text-sm">from NY</span>
             </div>
           </div>
+          {/* Drops delivered text */}
+          <div className="flex justify-center mt-2">
+            <span className="text-xs text-gray-400">10,000+ drops delivered.</span>
+          </div>
         </div>
 
         {/* Background Effects */}
