@@ -36,10 +36,10 @@ const Index = () => {
 
         {/* Description Text */}
         <div className="text-center mb-8">
-          <p className="text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold" style={{ fontSize: '22px' }}>
+          <p className="text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold" style={{ fontSize: '24px' }}>
             The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
           </p>
-          <p className="text-lg text-white font-semibold mb-8">
+          <p className="text-white font-semibold mb-8" style={{ fontSize: '26px' }}>
             Cop the Drop
           </p>
         </div>
@@ -81,10 +81,10 @@ const Index = () => {
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               XPRESS YOURSELF
             </h2>
-            <p className="text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold" style={{ fontSize: '22px' }}>
+            <p className="text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold" style={{ fontSize: '24px' }}>
               The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
             </p>
-            <p className="text-lg md:text-xl text-white font-semibold">
+            <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
               Cop the Drop
             </p>
           </div>
@@ -187,3 +187,4 @@ const Index = () => {
 };
 
 export default Index;
+
