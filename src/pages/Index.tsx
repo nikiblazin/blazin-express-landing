@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
 import { ArrowDown, Heart } from "lucide-react";
+import CounterAnimation from "@/components/CounterAnimation";
 
 const Index = () => {
   return (
@@ -55,7 +56,9 @@ const Index = () => {
 
         {/* Drops delivered text - moved lower and made larger on mobile */}
         <div className="flex justify-center mt-8 mb-4">
-          <span className="text-base font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
+          <span className="text-base font-bold text-white">
+            🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
+          </span>
         </div>
       </div>
 
@@ -108,7 +111,9 @@ const Index = () => {
           </div>
           {/* Drops delivered text */}
           <div className="flex justify-center mt-2">
-            <span className="text-sm font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
+            <span className="text-sm font-bold text-white">
+              🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
+            </span>
           </div>
         </div>
 
