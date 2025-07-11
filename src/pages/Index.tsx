@@ -1,5 +1,3 @@
-
-
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -40,7 +38,7 @@ const Index = () => {
             The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
           </p>
           <p className="text-white font-semibold mb-8" style={{ fontSize: '26px' }}>
-            Cop the Drop
+            Tap the fit. Cop the look. Delivered in 3h (NYC).
           </p>
         </div>
 
@@ -85,7 +83,7 @@ const Index = () => {
               The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
             </p>
             <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
-              Cop the Drop
+              Tap the fit. Cop the look. Delivered in 3h (NYC).
             </p>
           </div>
 
@@ -187,4 +185,3 @@ const Index = () => {
 };
 
 export default Index;
-
