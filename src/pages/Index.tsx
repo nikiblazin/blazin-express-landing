@@ -53,6 +53,11 @@ const Index = () => {
             <span className="text-sm">from NY</span>
           </div>
         </div>
+
+        {/* Drops delivered text - added to mobile */}
+        <div className="flex justify-center mb-4">
+          <span className="text-sm font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
+        </div>
       </div>
 
       {/* Desktop Hero Section */}
