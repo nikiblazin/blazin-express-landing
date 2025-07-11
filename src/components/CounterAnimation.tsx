@@ -42,9 +42,14 @@ const CounterAnimation: React.FC<CounterAnimationProps> = ({
     };
   }, [targetNumber, duration]);
 
+  // Format number with comma separator
+  const formatNumber = (num: number) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <span className={className}>
-      {count.toLocaleString()}
+      {formatNumber(count)}
     </span>
   );
 };
