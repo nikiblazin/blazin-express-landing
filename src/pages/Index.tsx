@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -54,9 +53,9 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Drops delivered text - added to mobile */}
-        <div className="flex justify-center mb-4">
-          <span className="text-sm font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
+        {/* Drops delivered text - moved lower and made larger on mobile */}
+        <div className="flex justify-center mt-8 mb-4">
+          <span className="text-base font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
         </div>
       </div>
 
