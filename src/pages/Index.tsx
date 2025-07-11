@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -35,11 +34,10 @@ const Index = () => {
         {/* Description Text */}
         <div className="text-center mb-8">
           <p className="text-lg text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold">
-            Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
-            spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
+            The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
           </p>
           <p className="text-lg text-white font-semibold mb-8">
-            Get BLAZIN on your phone and squad up with our it fashion crew!
+            Cop the Drop
           </p>
         </div>
 
@@ -74,11 +72,10 @@ const Index = () => {
               XPRESS YOURSELF
             </h2>
             <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold">
-              Hop into the dopest fashion network where you can xpress your style, vibe with the trendsetters, 
-              spark inspo and snag your fashion fix - all delivered in 3 hours or less in NY!
+              The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
             </p>
             <p className="text-lg md:text-xl text-white font-semibold">
-              Get BLAZIN on your phone and squad up with our it fashion crew!
+              Cop the Drop
             </p>
           </div>
 
