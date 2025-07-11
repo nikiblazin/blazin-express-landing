@@ -3,12 +3,17 @@ import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
 import { ArrowDown, Heart } from "lucide-react";
+import { useScrollDirection } from "@/hooks/useScrollDirection";
 
 const Index = () => {
+  const scrollDirection = useScrollDirection();
+
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Mobile Header - BeReal Style - Fixed at top */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 pt-8 bg-black">
+      {/* Mobile Header - Hide on scroll down */}
+      <div className={`lg:hidden fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 pt-8 bg-black transition-transform duration-300 ${
+        scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'
+      }`}>
         <h1 className="text-2xl font-black text-white">BLAZIN</h1>
         <Button 
           className="bg-white text-black hover:bg-gray-100 transition-all duration-300 px-4 py-2 rounded-full text-sm font-semibold"
