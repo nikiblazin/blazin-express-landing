@@ -44,18 +44,49 @@ const Index = () => {
         {/* Download Buttons */}
         <DownloadButtons variant="buttons" />
 
+        {/* Features Section */}
+        <div className="py-12 px-4 bg-gradient-to-b from-black to-gray-900">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-black">📲</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Scroll it</h3>
+                <p className="text-gray-400">Scroll the drip. Real fits. Zero filters.</p>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-black">🛒</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Shop it</h3>
+                <p className="text-gray-400">See it. Tap it. Cop the full fit fast (NYC).</p>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-black">🔥</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Drop it</h3>
+                <p className="text-gray-400">Drop your fit. Get love. Start trends.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Drops delivered text - positioned with equal spacing */}
+        <div className="flex justify-center mt-6 mb-6">
+          <span className="text-base font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
+        </div>
+
         {/* "With ❤️ from NY" */}
-        <div className="flex justify-center mt-8 mb-4">
+        <div className="flex justify-center mb-4">
           <div className="flex items-center gap-2 text-white">
             <span className="text-sm">With</span>
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             <span className="text-sm">from NY</span>
           </div>
-        </div>
-
-        {/* Drops delivered text - moved lower and made larger on mobile */}
-        <div className="flex justify-center mt-8 mb-4">
-          <span className="text-base font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
         </div>
       </div>
 
