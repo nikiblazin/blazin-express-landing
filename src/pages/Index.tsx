@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -75,8 +76,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Drops delivered text - positioned between features and "With love from NY" */}
-        <div className="flex justify-center mb-4">
+        {/* Drops delivered text - positioned between features and "With love from NY" with equal spacing */}
+        <div className="flex justify-center mb-8">
           <span className="text-base font-bold text-white">🔥 10,000+ drops delivered across the city.</span>
         </div>
 
