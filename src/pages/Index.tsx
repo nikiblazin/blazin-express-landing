@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/PhoneMockup";
 import { DownloadButtons } from "@/components/DownloadButtons";
@@ -35,7 +36,7 @@ const Index = () => {
 
         {/* Description Text */}
         <div className="text-center mb-8">
-          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold">
+          <p className="text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold" style={{ fontSize: '22px' }}>
             The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
           </p>
           <p className="text-lg text-white font-semibold mb-8">
@@ -80,7 +81,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               XPRESS YOURSELF
             </h2>
-            <p className="text-xl md:text-xl text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold">
+            <p className="text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold" style={{ fontSize: '22px' }}>
               The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
             </p>
             <p className="text-lg md:text-xl text-white font-semibold">
