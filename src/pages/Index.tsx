@@ -136,7 +136,7 @@ const Index = () => {
                 <span className="text-2xl text-black">🔥</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Drop it</h3>
-              <p className="text-gray-400">Drop your look. Spark a trend. Get noticed.</p>
+              <p className="text-gray-400">Drop your fit. Get love. Start trends.</p>
             </div>
           </div>
         </div>
