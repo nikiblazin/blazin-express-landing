@@ -64,7 +64,7 @@ const Index = () => {
 
       {/* Desktop Hero Section */}
       <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-48">
-        {/* Main Content - moved down even further with pt-48 instead of pt-32 */}
+        {/* Main Content - centered */}
         <div className="text-center z-10 max-w-4xl mx-auto">
           {/* Logo/Brand */}
           <div className="mb-8">
@@ -79,41 +79,43 @@ const Index = () => {
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               XPRESS YOURSELF
             </h2>
-            <p className="text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold" style={{ fontSize: '24px' }}>
+            <p className="text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold" style={{ fontSize: '24px' }}>
               The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
             </p>
-            <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
+            <p className="text-white font-semibold mb-8" style={{ fontSize: '26px' }}>
               Tap the fit. Cop the look. Delivered in 3h (NYC).
             </p>
           </div>
 
           {/* Download Buttons */}
-          <div className="mb-20">
+          <div className="mb-8">
             <DownloadButtons variant="buttons" />
           </div>
 
-          {/* Scroll Indicator - positioned 2cm (50px) below download buttons */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="w-6 h-6 text-white/60" />
+          {/* Phone Mockup - centered below content */}
+          <div className="flex justify-center mb-8">
+            <PhoneMockup />
           </div>
-        </div>
 
-        {/* Phone Mockup */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
-          <PhoneMockup />
-          {/* "With ❤️ from NY" centered below desktop mockup */}
-          <div className="flex justify-center mt-8">
+          {/* "With ❤️ from NY" centered below mockup */}
+          <div className="flex justify-center mb-4">
             <div className="flex items-center gap-2 text-white">
               <span className="text-sm">With</span>
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
               <span className="text-sm">from NY</span>
             </div>
           </div>
+
           {/* Drops delivered text */}
-          <div className="flex justify-center mt-2">
+          <div className="flex justify-center mb-20">
             <span className="text-sm font-bold text-white">
               🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
             </span>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <ArrowDown className="w-6 h-6 text-white/60" />
           </div>
         </div>
 
