@@ -64,59 +64,62 @@ const Index = () => {
 
       {/* Desktop Hero Section */}
       <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-48">
-        {/* Main Content - centered */}
-        <div className="text-center z-10 max-w-4xl mx-auto">
-          {/* Logo/Brand */}
-          <div className="mb-8">
-            <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
-              BLAZIN
-            </h1>
-            <div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
-          </div>
+        {/* Main Content Container - centered */}
+        <div className="relative z-10 max-w-6xl mx-auto w-full flex items-center justify-center">
+          {/* Text Content - left side but centered in available space */}
+          <div className="text-center max-w-4xl">
+            {/* Logo/Brand */}
+            <div className="mb-8">
+              <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
+                BLAZIN
+              </h1>
+              <div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
+            </div>
 
-          {/* Main Headline */}
-          <div className="mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-              XPRESS YOURSELF
-            </h2>
-            <p className="text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold" style={{ fontSize: '24px' }}>
-              The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
-            </p>
-            <p className="text-white font-semibold mb-8" style={{ fontSize: '26px' }}>
-              Tap the fit. Cop the look. Delivered in 3h (NYC).
-            </p>
-          </div>
+            {/* Main Headline */}
+            <div className="mb-8">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                XPRESS YOURSELF
+              </h2>
+              <p className="text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold" style={{ fontSize: '24px' }}>
+                The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
+              </p>
+              <p className="text-white font-semibold mb-8" style={{ fontSize: '26px' }}>
+                Tap the fit. Cop the look. Delivered in 3h (NYC).
+              </p>
+            </div>
 
-          {/* Download Buttons */}
-          <div className="mb-8">
-            <DownloadButtons variant="buttons" />
-          </div>
+            {/* Download Buttons */}
+            <div className="mb-8">
+              <DownloadButtons variant="buttons" />
+            </div>
 
-          {/* Phone Mockup - centered below content */}
-          <div className="flex justify-center mb-8">
-            <PhoneMockup />
-          </div>
+            {/* "With ❤️ from NY" centered below buttons */}
+            <div className="flex justify-center mb-4">
+              <div className="flex items-center gap-2 text-white">
+                <span className="text-sm">With</span>
+                <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+                <span className="text-sm">from NY</span>
+              </div>
+            </div>
 
-          {/* "With ❤️ from NY" centered below mockup */}
-          <div className="flex justify-center mb-4">
-            <div className="flex items-center gap-2 text-white">
-              <span className="text-sm">With</span>
-              <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-              <span className="text-sm">from NY</span>
+            {/* Drops delivered text */}
+            <div className="flex justify-center">
+              <span className="text-sm font-bold text-white">
+                🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
+              </span>
             </div>
           </div>
 
-          {/* Drops delivered text */}
-          <div className="flex justify-center mb-20">
-            <span className="text-sm font-bold text-white">
-              🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
-            </span>
+          {/* Phone Mockup - right side */}
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+            <PhoneMockup />
           </div>
+        </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <ArrowDown className="w-6 h-6 text-white/60" />
-          </div>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown className="w-6 h-6 text-white/60" />
         </div>
 
         {/* Background Effects */}
