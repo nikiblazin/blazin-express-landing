@@ -45,29 +45,35 @@ export const FitsCarousel = () => {
                 position: 'relative',
                 width: '100%',
                 paddingBottom: '133.33%',
-                borderRadius: '24px',
-                overflow: 'hidden',
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-                clipPath: 'inset(0 round 24px)',
-                WebkitClipPath: 'inset(0 round 24px)',
+                maskImage: 'radial-gradient(white, white)',
+                WebkitMaskImage: 'radial-gradient(white, white)',
+                maskComposite: 'intersect',
+                WebkitMaskComposite: 'source-in',
               }}
             >
-              <img
-                src={image}
-                alt={`Fit ${index + 1}`}
+              <div
                 style={{
                   position: 'absolute',
-                  top: '0',
-                  left: '0',
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
                   borderRadius: '24px',
-                  WebkitBorderRadius: '24px',
-                  MozBorderRadius: '24px',
-                  display: 'block',
+                  overflow: 'hidden',
                 }}
-              />
+              >
+                <img
+                  src={image}
+                  alt={`Fit ${index + 1}`}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
