@@ -41,17 +41,17 @@ const Index = () => {
       </div>
 
       {/* Desktop Hero Section */}
-      <div className="hidden lg:block relative min-h-screen px-4 pt-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+      <div className="hidden lg:block relative min-h-screen px-4">
+        <div className="max-w-7xl mx-auto h-screen">
+          <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
             {/* Left Column - Text Content */}
-            <div className="text-center lg:text-left z-10">
+            <div className="flex flex-col justify-center z-10">
               {/* Logo/Brand */}
               <div className="mb-8">
                 <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
                   BLAZIN
                 </h1>
-                <div className="w-32 h-1 bg-white mx-auto lg:mx-0 rounded-full"></div>
+                <div className="w-32 h-1 bg-white rounded-full"></div>
               </div>
 
               {/* Main Headline */}
@@ -65,7 +65,7 @@ const Index = () => {
               </div>
 
               {/* Download Buttons */}
-              <div className="mb-12">
+              <div>
                 <DownloadButtons variant="buttons" />
               </div>
             </div>
