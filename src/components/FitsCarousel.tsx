@@ -34,15 +34,19 @@ export const FitsCarousel = () => {
             pointerEvents: currentIndex === index ? 'auto' : 'none',
           }}
         >
-          <div className="relative w-full max-w-[360px] md:max-w-[480px] mx-auto" style={{ aspectRatio: '3/4' }}>
+          <div 
+            className="relative w-full max-w-[360px] md:max-w-[480px] mx-auto overflow-hidden"
+            style={{ 
+              aspectRatio: '3/4',
+              borderRadius: '24px',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
+            }}
+          >
             <img
               src={image}
               alt={`Fit ${index + 1}`}
-              className="w-full h-full object-cover shadow-2xl"
-              style={{ 
-                borderRadius: '1.5rem',
-                display: 'block'
-              }}
+              className="w-full h-full object-cover"
+              style={{ display: 'block' }}
             />
           </div>
         </div>
