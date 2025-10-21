@@ -25,13 +25,6 @@ export const FitsCarousel = () => {
 
   return (
     <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative">
-      <svg width="0" height="0" style={{ position: 'absolute' }}>
-        <defs>
-          <clipPath id="roundedCorners" clipPathUnits="objectBoundingBox">
-            <rect x="0" y="0" width="1" height="1" rx="0.05" ry="0.0375" />
-          </clipPath>
-        </defs>
-      </svg>
       {fitImages.map((image, index) => (
         <div
           key={index}
@@ -54,6 +47,7 @@ export const FitsCarousel = () => {
                 paddingBottom: '133.33%',
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
                 borderRadius: '24px',
+                overflow: 'hidden',
               }}
             >
               <img
@@ -67,8 +61,6 @@ export const FitsCarousel = () => {
                   height: '100%',
                   objectFit: 'cover',
                   display: 'block',
-                  clipPath: 'url(#roundedCorners)',
-                  WebkitClipPath: 'url(#roundedCorners)',
                 }}
               />
             </div>
