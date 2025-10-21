@@ -35,13 +35,7 @@ export const FitsCarousel = () => {
             pointerEvents: currentIndex === index ? 'auto' : 'none',
           }}
         >
-          <div style={{ 
-            position: 'relative',
-            width: '100%',
-            maxWidth: '360px',
-            aspectRatio: '3/4',
-            margin: '0 auto',
-          }}>
+          <div className="relative w-full max-w-[360px] md:max-w-[480px] mx-auto" style={{ aspectRatio: '3/4' }}>
             <div style={{
               width: '100%',
               height: '100%',
