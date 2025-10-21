@@ -33,7 +33,7 @@ const Index = () => {
       {/* Floating Get the app button - Mobile only */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-black to-transparent z-50">
         <Button 
-          className="w-full bg-white text-black hover:bg-gray-100 transition-all duration-300 py-6 rounded-full text-lg font-semibold relative overflow-hidden group animate-subtle-bounce hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+          className="w-full bg-white text-black hover:bg-gray-100 transition-all duration-300 py-6 rounded-full text-lg font-semibold relative overflow-hidden group animate-pulse-glow hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
           onClick={() => window.open('https://apps.apple.com/', '_blank')}
         >
           <span className="relative z-10">Get the app</span>
