@@ -42,7 +42,7 @@ const Index = () => {
         </div>
 
         {/* Drops delivered text - moved lower and made larger on mobile */}
-        <div className="flex justify-center mt-8 mb-4">
+        <div className="flex justify-center mt-8 mb-8">
           <span className="text-base font-bold text-white text-center">
             🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
           </span>
