@@ -51,7 +51,6 @@ export const FitsCarousel = () => {
                   height: '100%',
                   objectFit: 'cover',
                   display: 'block',
-                  borderRadius: '24px',
                 }}
               />
             </div>
