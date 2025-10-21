@@ -31,7 +31,8 @@ export const FitsCarousel = () => {
           className="absolute inset-0 px-4 flex items-center justify-center"
           style={{
             opacity: currentIndex === index ? 1 : 0,
-            transition: 'opacity 700ms ease-in-out',
+            transform: currentIndex === index ? 'scale(1) rotate(0deg)' : 'scale(0.9) rotate(-2deg)',
+            transition: 'all 600ms cubic-bezier(0.34, 1.56, 0.64, 1)',
             pointerEvents: currentIndex === index ? 'auto' : 'none',
           }}
         >
