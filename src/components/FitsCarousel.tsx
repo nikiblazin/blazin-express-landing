@@ -35,24 +35,39 @@ export const FitsCarousel = () => {
             pointerEvents: currentIndex === index ? 'auto' : 'none',
           }}
         >
-          <div className="w-full max-w-[480px] mx-auto">
+          <div style={{ 
+            width: '100%', 
+            maxWidth: '480px', 
+            margin: '0 auto' 
+          }}>
             <div 
-              className="relative w-full"
               style={{ 
+                position: 'relative',
+                width: '100%',
                 paddingBottom: '133.33%',
                 borderRadius: '24px',
                 overflow: 'hidden',
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-                transform: 'translateZ(0)', // Force GPU rendering
-                WebkitMaskImage: '-webkit-radial-gradient(white, white)', // Safari fix
+                WebkitBorderRadius: '24px',
+                MozBorderRadius: '24px',
+                willChange: 'transform',
+                isolation: 'isolate',
               }}
             >
               <img
                 src={image}
                 alt={`Fit ${index + 1}`}
-                className="absolute top-0 left-0 w-full h-full object-cover"
                 style={{
-                  borderRadius: 'inherit',
+                  position: 'absolute',
+                  top: '0',
+                  left: '0',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: '24px',
+                  WebkitBorderRadius: '24px',
+                  MozBorderRadius: '24px',
+                  display: 'block',
                 }}
               />
             </div>
