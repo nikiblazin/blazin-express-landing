@@ -16,7 +16,6 @@ export const FitsCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => {
-        // Loop back to 0 when reaching the end
         return (prev + 1) % fitImages.length;
       });
     }, 2000);
@@ -24,34 +23,26 @@ export const FitsCarousel = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const getImageIndex = (offset: number) => {
-    const index = (currentIndex + offset) % fitImages.length;
-    return index < 0 ? fitImages.length + index : index;
-  };
-
   return (
     <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative">
-      {[-1, 0, 1].map((offset) => {
-        const imageIndex = getImageIndex(offset);
-        return (
-          <div
-            key={`${imageIndex}-${offset}`}
-            className="absolute inset-0 transition-opacity duration-700 ease-in-out px-4 flex items-center justify-center"
-            style={{
-              opacity: offset === 0 ? 1 : 0,
-              pointerEvents: offset === 0 ? 'auto' : 'none',
-            }}
-          >
-            <div className="relative aspect-[3/4] w-full max-w-[360px] md:max-w-[480px] mx-auto">
-              <img
-                src={fitImages[imageIndex]}
-                alt={`Fit ${imageIndex + 1}`}
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
-              />
-            </div>
+      {fitImages.map((image, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 transition-opacity duration-700 ease-in-out px-4 flex items-center justify-center"
+          style={{
+            opacity: currentIndex === index ? 1 : 0,
+            pointerEvents: currentIndex === index ? 'auto' : 'none',
+          }}
+        >
+          <div className="relative aspect-[3/4] w-full max-w-[360px] md:max-w-[480px] mx-auto">
+            <img
+              src={image}
+              alt={`Fit ${index + 1}`}
+              className="w-full h-full object-cover rounded-2xl shadow-2xl"
+            />
           </div>
-        );
-      })}
+        </div>
+      ))}
     </div>
   );
 };
