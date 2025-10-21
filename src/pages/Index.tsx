@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { PhoneMockup } from "@/components/PhoneMockup";
+import { FitsCarousel } from "@/components/FitsCarousel";
 import { DownloadButtons } from "@/components/DownloadButtons";
 import { ArrowDown, Heart } from "lucide-react";
 import CounterAnimation from "@/components/CounterAnimation";
@@ -17,9 +17,9 @@ const Index = () => {
           </h2>
         </div>
 
-        {/* Phone Mockup */}
-        <div className="flex justify-center mb-8">
-          <PhoneMockup />
+        {/* Fits Carousel */}
+        <div className="mb-8 -mx-4">
+          <FitsCarousel />
         </div>
 
         {/* Description Text */}
@@ -73,9 +73,9 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Phone Mockup */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
-          <PhoneMockup />
+        {/* Fits Carousel - Desktop */}
+        <div className="mt-16">
+          <FitsCarousel />
         </div>
 
         {/* Background Effects */}
