@@ -15,32 +15,43 @@ export const FitsCarousel = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % fitImages.length);
+      setCurrentIndex((prev) => {
+        // Loop back to 0 when reaching the end
+        return (prev + 1) % fitImages.length;
+      });
     }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const getImageIndex = (offset: number) => {
+    const index = (currentIndex + offset) % fitImages.length;
+    return index < 0 ? fitImages.length + index : index;
+  };
+
   return (
     <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative">
-      {fitImages.map((image, index) => (
-        <div
-          key={index}
-          className="absolute inset-0 transition-all duration-700 ease-in-out px-4 flex items-center justify-center"
-          style={{
-            transform: `translateY(${(index - currentIndex) * 100}%)`,
-            opacity: index === currentIndex ? 1 : 0,
-          }}
-        >
-          <div className="relative aspect-[3/4] w-full max-w-[360px] md:max-w-[480px] mx-auto">
-            <img
-              src={image}
-              alt={`Fit ${index + 1}`}
-              className="w-full h-full object-cover rounded-2xl md:rounded-3xl shadow-2xl"
-            />
+      {[-1, 0, 1].map((offset) => {
+        const imageIndex = getImageIndex(offset);
+        return (
+          <div
+            key={`${imageIndex}-${offset}`}
+            className="absolute inset-0 transition-all duration-700 ease-in-out px-4 flex items-center justify-center"
+            style={{
+              transform: `translateY(${offset * 100}%)`,
+              opacity: offset === 0 ? 1 : 0,
+            }}
+          >
+            <div className="relative aspect-[3/4] w-full max-w-[360px] md:max-w-[480px] mx-auto">
+              <img
+                src={fitImages[imageIndex]}
+                alt={`Fit ${imageIndex + 1}`}
+                className="w-full h-full object-cover rounded-2xl md:rounded-3xl shadow-2xl"
+              />
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
