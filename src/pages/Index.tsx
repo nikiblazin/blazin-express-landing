@@ -122,7 +122,7 @@ const Index = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-8 px-4 bg-gradient-to-b from-black to-gray-900">
+      <div className="py-2 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
