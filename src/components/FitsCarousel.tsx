@@ -18,7 +18,7 @@ export const FitsCarousel = () => {
       setCurrentIndex((prev) => {
         return (prev + 1) % fitImages.length;
       });
-    }, 500);
+    }, 600);
 
     return () => clearInterval(interval);
   }, []);
