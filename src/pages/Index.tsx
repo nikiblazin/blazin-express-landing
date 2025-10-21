@@ -41,41 +41,45 @@ const Index = () => {
       </div>
 
       {/* Desktop Hero Section */}
-      <div className="hidden lg:block relative min-h-screen flex flex-col items-center justify-center px-4 pt-48">
-        {/* Main Content - moved down even further with pt-48 instead of pt-32 */}
-        <div className="text-center z-10 max-w-4xl mx-auto">
-          {/* Logo/Brand */}
-          <div className="mb-8">
-            <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
-              BLAZIN
-            </h1>
-            <div className="w-32 h-1 bg-white mx-auto rounded-full"></div>
+      <div className="hidden lg:block relative min-h-screen px-4 pt-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+            {/* Left Column - Text Content */}
+            <div className="text-center lg:text-left z-10">
+              {/* Logo/Brand */}
+              <div className="mb-8">
+                <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
+                  BLAZIN
+                </h1>
+                <div className="w-32 h-1 bg-white mx-auto lg:mx-0 rounded-full"></div>
+              </div>
+
+              {/* Main Headline */}
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                  Your daily drop<br />of real style.
+                </h2>
+                <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
+                  The fit feed that's actually 🔥
+                </p>
+              </div>
+
+              {/* Download Buttons */}
+              <div className="mb-12">
+                <DownloadButtons variant="buttons" />
+              </div>
+            </div>
+
+            {/* Right Column - Fits Carousel */}
+            <div className="z-10">
+              <FitsCarousel />
+            </div>
           </div>
 
-          {/* Main Headline */}
-          <div className="mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-              Your daily drop<br />of real style.
-            </h2>
-            <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
-              The fit feed that's actually 🔥
-            </p>
-          </div>
-
-          {/* Download Buttons */}
-          <div className="mb-20">
-            <DownloadButtons variant="buttons" />
-          </div>
-
-          {/* Scroll Indicator - positioned 2cm (50px) below download buttons */}
+          {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ArrowDown className="w-6 h-6 text-white/60" />
           </div>
-        </div>
-
-        {/* Fits Carousel - Desktop */}
-        <div className="mt-16">
-          <FitsCarousel />
         </div>
 
         {/* Background Effects */}
