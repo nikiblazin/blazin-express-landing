@@ -36,26 +36,18 @@ export const FitsCarousel = () => {
           }}
         >
           <div 
-            className="relative w-full max-w-[360px] md:max-w-[480px] mx-auto overflow-hidden"
+            className="relative w-full max-w-[360px] md:max-w-[480px] mx-auto rounded-[24px] overflow-hidden"
             style={{
-              aspectRatio: '3/4',
-              borderRadius: '24px',
               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-              WebkitBorderRadius: '24px',
-              MozBorderRadius: '24px',
             }}
           >
-            <img
-              src={image}
-              alt={`Fit ${index + 1}`}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                display: 'block',
-                borderRadius: '24px',
-              }}
-            />
+            <div style={{ aspectRatio: '3/4' }}>
+              <img
+                src={image}
+                alt={`Fit ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       ))}
