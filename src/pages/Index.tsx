@@ -12,7 +12,7 @@ const Index = () => {
         {/* Main Headline with BLAZIN */}
         <div className="text-center mb-6">
           <h1 className="text-6xl font-black text-white mb-2 tracking-wider">BLAZIN</h1>
-          <h2 className="font-bold leading-tight text-white" style={{ fontSize: '39px' }}>
+          <h2 className="font-bold leading-tight text-white whitespace-nowrap" style={{ fontSize: '39px' }}>
             Your drip. Your vibe.
           </h2>
         </div>
@@ -73,7 +73,7 @@ const Index = () => {
 
           {/* Main Headline */}
           <div className="mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white whitespace-nowrap">
               Your drip. Your vibe.
             </h2>
             <p className="text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold" style={{ fontSize: '24px' }}>
