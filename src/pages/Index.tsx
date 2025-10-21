@@ -13,7 +13,7 @@ const Index = () => {
         <div className="text-center mb-6">
           <h1 className="text-6xl font-black text-white mb-2 tracking-wider">BLAZIN</h1>
           <h2 className="font-bold leading-tight text-white" style={{ fontSize: '39px' }}>
-            Your vibe,<br />your fit.
+            Your vibe, your fit.
           </h2>
         </div>
 
