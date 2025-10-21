@@ -35,9 +35,9 @@ const Index = () => {
         {/* "With ❤️ from NYC" */}
         <div className="flex justify-center mt-8 mb-4">
           <div className="flex items-center gap-2 text-white">
-            <span className="text-sm">With</span>
-            <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-            <span className="text-sm">from NYC</span>
+            <span className="text-base">With</span>
+            <Heart className="w-5 h-5 text-red-500 fill-red-500" />
+            <span className="text-base">from NYC</span>
           </div>
         </div>
 
@@ -101,9 +101,9 @@ const Index = () => {
           {/* "With ❤️ from NY" centered below desktop mockup */}
           <div className="flex justify-center mt-8">
             <div className="flex items-center gap-2 text-white">
-              <span className="text-sm">With</span>
-              <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-              <span className="text-sm">from NY</span>
+              <span className="text-base">With</span>
+              <Heart className="w-5 h-5 text-red-500 fill-red-500" />
+              <span className="text-base">from NYC</span>
             </div>
           </div>
           {/* Drops delivered text */}
