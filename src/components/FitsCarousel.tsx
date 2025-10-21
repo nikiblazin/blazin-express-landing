@@ -36,17 +36,17 @@ export const FitsCarousel = () => {
         return (
           <div
             key={`${imageIndex}-${offset}`}
-            className="absolute inset-0 transition-all duration-700 ease-in-out px-4 flex items-center justify-center"
+            className="absolute inset-0 transition-opacity duration-700 ease-in-out px-4 flex items-center justify-center"
             style={{
-              transform: `translateY(${offset * 100}%)`,
               opacity: offset === 0 ? 1 : 0,
+              pointerEvents: offset === 0 ? 'auto' : 'none',
             }}
           >
             <div className="relative aspect-[3/4] w-full max-w-[360px] md:max-w-[480px] mx-auto">
               <img
                 src={fitImages[imageIndex]}
                 alt={`Fit ${imageIndex + 1}`}
-                className="w-full h-full object-cover rounded-2xl md:rounded-3xl shadow-2xl"
+                className="w-full h-full object-cover rounded-2xl shadow-2xl"
               />
             </div>
           </div>
