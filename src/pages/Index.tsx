@@ -130,7 +130,7 @@ const Index = () => {
                 <span className="text-2xl text-black">📲</span>
               </div>
               <h3 className="text-xl font-bold mb-3">Scroll it</h3>
-              <p className="text-gray-400">Scroll the drip. Real fits. Zero filters.</p>
+              <p className="text-gray-400">Just fits. No fake flex. Your feed, your vibe.</p>
             </div>
 
             <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
