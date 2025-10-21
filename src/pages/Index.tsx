@@ -13,7 +13,7 @@ const Index = () => {
         <div className="text-center mb-6">
           <h1 className="text-6xl font-black text-white mb-2 tracking-wider">BLAZIN</h1>
           <h2 className="font-bold leading-tight text-white" style={{ fontSize: '39px' }}>
-            XPRESS<br />YOURSELF
+            Your vibe,<br />your fit.
           </h2>
         </div>
 
@@ -74,7 +74,7 @@ const Index = () => {
           {/* Main Headline */}
           <div className="mb-8">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-              XPRESS YOURSELF
+              Your vibe, your fit.
             </h2>
             <p className="text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold" style={{ fontSize: '24px' }}>
               Real fits. Real vibes. No filters.
