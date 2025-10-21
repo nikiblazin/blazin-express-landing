@@ -24,9 +24,6 @@ const Index = () => {
 
         {/* Description Text */}
         <div className="text-center mb-8">
-          <p className="text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold" style={{ fontSize: '24px' }}>
-            Real fits. Real vibes. Zero cap.
-          </p>
           <p className="text-white font-semibold mb-8" style={{ fontSize: '26px' }}>
             Tap in. Cop fast. 3h drop (NYC).
           </p>
@@ -76,9 +73,6 @@ const Index = () => {
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white whitespace-nowrap">
               Your drip. Your vibe.
             </h2>
-            <p className="text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold" style={{ fontSize: '24px' }}>
-              Real fits. Real vibes. Zero cap.
-            </p>
             <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
               Tap in. Cop fast. 3h drop (NYC).
             </p>
