@@ -37,17 +37,21 @@ export const FitsCarousel = () => {
         >
           <div className="w-full max-w-[480px] mx-auto">
             <div 
-              className="relative w-full overflow-hidden rounded-[24px]" 
+              className="relative w-full"
               style={{ 
                 paddingBottom: '133.33%',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
                 borderRadius: '24px',
+                overflow: 'hidden',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
               }}
             >
               <img
                 src={image}
                 alt={`Fit ${index + 1}`}
-                className="absolute top-0 left-0 w-full h-full object-cover rounded-[24px]"
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                style={{
+                  borderRadius: '24px',
+                }}
               />
             </div>
           </div>
