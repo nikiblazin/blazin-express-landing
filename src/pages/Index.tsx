@@ -107,7 +107,7 @@ const Index = () => {
 
             <div className="p-8 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700 hover:border-white transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-white to-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-black">🔥</span>
+                <Heart className="w-7 h-7 fill-red-500 text-red-500" />
               </div>
               <h3 className="text-xl font-bold mb-3">Drop it</h3>
               <p className="text-gray-400">Post your fit. Get love.</p>
