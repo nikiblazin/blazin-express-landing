@@ -25,6 +25,13 @@ export const FitsCarousel = () => {
 
   return (
     <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative">
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
+        <defs>
+          <clipPath id="roundedCorners" clipPathUnits="objectBoundingBox">
+            <rect x="0" y="0" width="1" height="1" rx="0.05" ry="0.0375" />
+          </clipPath>
+        </defs>
+      </svg>
       {fitImages.map((image, index) => (
         <div
           key={index}
@@ -46,34 +53,24 @@ export const FitsCarousel = () => {
                 width: '100%',
                 paddingBottom: '133.33%',
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-                maskImage: 'radial-gradient(white, white)',
-                WebkitMaskImage: 'radial-gradient(white, white)',
-                maskComposite: 'intersect',
-                WebkitMaskComposite: 'source-in',
+                borderRadius: '24px',
               }}
             >
-              <div
+              <img
+                src={image}
+                alt={`Fit ${index + 1}`}
                 style={{
                   position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  borderRadius: '24px',
-                  overflow: 'hidden',
+                  top: '0',
+                  left: '0',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block',
+                  clipPath: 'url(#roundedCorners)',
+                  WebkitClipPath: 'url(#roundedCorners)',
                 }}
-              >
-                <img
-                  src={image}
-                  alt={`Fit ${index + 1}`}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block',
-                  }}
-                />
-              </div>
+              />
             </div>
           </div>
         </div>
