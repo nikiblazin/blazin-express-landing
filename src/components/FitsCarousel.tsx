@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import { useState, useEffect } from "react";
 import fit1 from "@/assets/fit1.png";
 import fit2 from "@/assets/fit2.png";
 import fit3 from "@/assets/fit3.png";
@@ -13,45 +11,70 @@ import fit8 from "@/assets/fit8.png";
 const fitImages = [fit1, fit2, fit3, fit4, fit5, fit6, fit7, fit8];
 
 export const FitsCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true },
-    [Autoplay({ delay: 600, stopOnInteraction: false })]
-  );
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (emblaApi) {
-      emblaApi.reInit();
-    }
-  }, [emblaApi]);
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => {
+        return (prev + 1) % fitImages.length;
+      });
+    }, 600);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="w-full h-[500px] md:h-[600px] overflow-hidden">
-      <div ref={emblaRef} className="h-full">
-        <div className="flex h-full">
-          {fitImages.map((image, index) => (
-            <div
-              key={index}
-              className="flex-[0_0_100%] min-w-0 px-4 flex items-center justify-center"
+    <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative">
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
+        <defs>
+          <clipPath id="roundedCorners" clipPathUnits="objectBoundingBox">
+            <rect x="0" y="0" width="1" height="1" rx="0.05" ry="0.0375" />
+          </clipPath>
+        </defs>
+      </svg>
+      {fitImages.map((image, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 px-4 flex items-center justify-center"
+          style={{
+            opacity: currentIndex === index ? 1 : 0,
+            transition: 'opacity 200ms ease-in-out',
+            pointerEvents: currentIndex === index ? 'auto' : 'none',
+          }}
+        >
+          <div style={{ 
+            width: '100%', 
+            maxWidth: '480px', 
+            margin: '0 auto' 
+          }}>
+            <div 
+              style={{ 
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '133.33%',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                borderRadius: '24px',
+              }}
             >
-              <div className="w-full max-w-[480px] mx-auto">
-                <div 
-                  className="relative w-full rounded-[24px] overflow-hidden"
-                  style={{ 
-                    paddingBottom: '133.33%',
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-                  }}
-                >
-                  <img
-                    src={image}
-                    alt={`Fit ${index + 1}`}
-                    className="absolute top-0 left-0 w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+              <img
+                src={image}
+                alt={`Fit ${index + 1}`}
+                style={{
+                  position: 'absolute',
+                  top: '0',
+                  left: '0',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block',
+                  clipPath: 'url(#roundedCorners)',
+                  WebkitClipPath: 'url(#roundedCorners)',
+                }}
+              />
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
