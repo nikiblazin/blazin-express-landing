@@ -25,10 +25,10 @@ const Index = () => {
         {/* Description Text */}
         <div className="text-center mb-8">
           <p className="text-white max-w-3xl mx-auto leading-relaxed mb-4 font-inter font-bold" style={{ fontSize: '24px' }}>
-            The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
+            Real fits. Real vibes. zero filters.
           </p>
           <p className="text-white font-semibold mb-8" style={{ fontSize: '26px' }}>
-            Tap the fit. Cop the look. Delivered in 3h (NYC).
+            Tap in. Cop the look. Delivered in 3h (NYC).
           </p>
         </div>
 
@@ -77,10 +77,10 @@ const Index = () => {
               XPRESS YOURSELF
             </h2>
             <p className="text-white max-w-3xl mx-auto leading-relaxed mb-8 font-inter font-bold" style={{ fontSize: '24px' }}>
-              The fashion feed where real fits drop first. No filters. No fakes. Just style in your hands.
+              Real fits. Real vibes. zero filters.
             </p>
             <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
-              Tap the fit. Cop the look. Delivered in 3h (NYC).
+              Tap in. Cop the look. Delivered in 3h (NYC).
             </p>
           </div>
 
