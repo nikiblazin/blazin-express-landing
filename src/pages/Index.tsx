@@ -13,7 +13,7 @@ const Index = () => {
         <div className="text-center mb-6">
           <h1 className="text-6xl font-black text-white mb-2 tracking-wider">BLAZIN</h1>
           <h2 className="font-bold leading-tight text-white whitespace-nowrap" style={{ fontSize: '39px' }}>
-            Your drip. Your vibe.
+            Your daily drop of real style.
           </h2>
         </div>
 
@@ -55,7 +55,7 @@ const Index = () => {
           {/* Main Headline */}
           <div className="mb-8">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white whitespace-nowrap">
-              Your drip. Your vibe.
+              Your daily drop of real style.
             </h2>
             <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
               The fit feed that's actually 🔥
