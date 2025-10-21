@@ -18,7 +18,7 @@ export const FitsCarousel = () => {
       setCurrentIndex((prev) => {
         return (prev + 1) % fitImages.length;
       });
-    }, 1200);
+    }, 800);
 
     return () => clearInterval(interval);
   }, []);
@@ -31,7 +31,7 @@ export const FitsCarousel = () => {
           className="absolute inset-0 px-4 flex items-center justify-center"
           style={{
             opacity: currentIndex === index ? 1 : 0,
-            transition: 'opacity 400ms ease-in-out',
+            transition: 'opacity 300ms ease-in-out',
             pointerEvents: currentIndex === index ? 'auto' : 'none',
           }}
         >
