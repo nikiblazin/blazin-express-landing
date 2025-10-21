@@ -25,7 +25,7 @@ const Index = () => {
         {/* Description Text */}
         <div className="text-center mb-8">
           <p className="text-white font-semibold mb-8" style={{ fontSize: '26px' }}>
-            Tap in. Cop fast. 3h drop (NYC).
+            The fit feed that's actually 🔥
           </p>
         </div>
 
@@ -65,7 +65,7 @@ const Index = () => {
               Your drip. Your vibe.
             </h2>
             <p className="text-white font-semibold" style={{ fontSize: '26px' }}>
-              Tap in. Cop fast. 3h drop (NYC).
+              The fit feed that's actually 🔥
             </p>
           </div>
 
