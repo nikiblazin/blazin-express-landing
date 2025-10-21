@@ -11,7 +11,7 @@ const Index = () => {
       <div className="lg:hidden px-4 min-h-screen pt-8 pb-24">
         {/* Main Headline with BLAZIN */}
         <div className="text-center mb-6">
-          <h1 className="text-6xl font-black text-white mb-2 tracking-[0.3em]">BLAZIN</h1>
+          <h1 className="text-6xl font-black text-white mb-2 tracking-wider">BLAZIN</h1>
           <h2 className="font-bold leading-tight text-white" style={{ fontSize: '39px' }}>
             XPRESS<br />YOURSELF
           </h2>
