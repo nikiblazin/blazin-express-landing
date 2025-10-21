@@ -12,53 +12,35 @@ const fitImages = [fit1, fit2, fit3, fit4, fit5, fit6, fit7, fit8];
 
 export const FitsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(true);
-
-  // Duplicate images for seamless infinite loop
-  const allImages = [...fitImages, ...fitImages];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setCurrentIndex((prev) => prev + 1);
+      setCurrentIndex((prev) => (prev + 1) % fitImages.length);
     }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    // Reset to beginning when we reach the duplicated section
-    if (currentIndex === fitImages.length) {
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentIndex(0);
-      }, 700); // Match transition duration
-    }
-  }, [currentIndex]);
-
   return (
     <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative">
-      <div
-        className={`flex flex-col ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
-        style={{
-          transform: `translateY(-${currentIndex * 100}%)`,
-        }}
-      >
-        {allImages.map((image, index) => (
-          <div
-            key={index}
-            className="w-full h-[500px] md:h-[600px] flex-shrink-0 px-4 flex items-center justify-center"
-          >
-            <div className="relative aspect-[3/4] w-full max-w-[360px] md:max-w-[480px] mx-auto">
-              <img
-                src={image}
-                alt={`Fit ${(index % fitImages.length) + 1}`}
-                className="w-full h-full object-cover rounded-2xl md:rounded-3xl shadow-2xl"
-              />
-            </div>
+      {fitImages.map((image, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 transition-all duration-700 ease-in-out px-4 flex items-center justify-center"
+          style={{
+            transform: `translateY(${(index - currentIndex) * 100}%)`,
+            opacity: index === currentIndex ? 1 : 0,
+          }}
+        >
+          <div className="relative aspect-[3/4] w-full max-w-[360px] md:max-w-[480px] mx-auto">
+            <img
+              src={image}
+              alt={`Fit ${index + 1}`}
+              className="w-full h-full object-cover rounded-2xl md:rounded-3xl shadow-2xl"
+            />
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
