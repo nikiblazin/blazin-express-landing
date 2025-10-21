@@ -28,13 +28,6 @@ const Index = () => {
             The fit feed that's actually 🔥
           </p>
         </div>
-
-        {/* Drops delivered text - moved lower and made larger on mobile */}
-        <div className="flex justify-center mt-8 mb-0">
-          <span className="text-base font-bold text-white text-center">
-            🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
-          </span>
-        </div>
       </div>
 
       {/* Floating Get the app button - Mobile only */}
@@ -83,12 +76,6 @@ const Index = () => {
         {/* Phone Mockup */}
         <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
           <PhoneMockup />
-          {/* Drops delivered text */}
-          <div className="flex justify-center mt-2 mb-0">
-            <span className="text-sm font-bold text-white text-center">
-              🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
-            </span>
-          </div>
         </div>
 
         {/* Background Effects */}
