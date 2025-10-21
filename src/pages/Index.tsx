@@ -23,7 +23,7 @@ const Index = () => {
         </div>
 
         {/* Description Text */}
-        <div className="text-center mb-2">
+        <div className="text-center mb-0">
           <p className="text-white font-semibold mb-4" style={{ fontSize: '26px' }}>
             The fit feed that's actually 🔥
           </p>
