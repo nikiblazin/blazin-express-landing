@@ -40,7 +40,7 @@ export const FitsCarousel = () => {
               <img
                 src={image}
                 alt={`Fit ${index + 1}`}
-                className="absolute top-0 left-0 w-full h-full object-cover rounded-[24px]"
+                className="absolute top-0 left-0 w-full h-full object-cover rounded-[24px] md:rounded-[32px]"
                 style={{
                   boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
                 }}
