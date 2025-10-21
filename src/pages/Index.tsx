@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* Mobile Layout */}
-      <div className="lg:hidden px-4 min-h-screen pt-8 pb-12">
+      <div className="lg:hidden px-4 min-h-screen pt-8 pb-4">
         {/* Main Headline with BLAZIN */}
         <div className="text-center mb-6">
           <h1 className="text-6xl font-black text-white mb-2 tracking-wider">BLAZIN</h1>
