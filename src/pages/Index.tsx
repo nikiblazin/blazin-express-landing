@@ -45,17 +45,17 @@ const Index = () => {
         <div className="max-w-7xl mx-auto h-screen">
           <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
             {/* Left Column - Text Content */}
-            <div className="flex flex-col justify-center z-10">
+            <div className="flex flex-col justify-center items-center z-10">
               {/* Logo/Brand */}
-              <div className="mb-8">
+              <div className="mb-8 text-center">
                 <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-4 text-white">
                   BLAZIN
                 </h1>
-                <div className="w-32 h-1 bg-white rounded-full"></div>
+                <div className="w-32 h-1 bg-white rounded-full mx-auto"></div>
               </div>
 
               {/* Main Headline */}
-              <div className="mb-8">
+              <div className="mb-8 text-center">
                 <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
                   Your daily drop<br />of real style.
                 </h2>
