@@ -29,15 +29,6 @@ const Index = () => {
           </p>
         </div>
 
-        {/* "With ❤️ from NYC" */}
-        <div className="flex justify-center mt-8 mb-4">
-          <div className="flex items-center gap-2 text-white">
-            <span className="text-base">With</span>
-            <Heart className="w-5 h-5 text-red-500 fill-red-500" />
-            <span className="text-base">from NYC</span>
-          </div>
-        </div>
-
         {/* Drops delivered text - moved lower and made larger on mobile */}
         <div className="flex justify-center mt-8 mb-0">
           <span className="text-base font-bold text-white text-center">
@@ -92,14 +83,6 @@ const Index = () => {
         {/* Phone Mockup */}
         <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
           <PhoneMockup />
-          {/* "With ❤️ from NY" centered below desktop mockup */}
-          <div className="flex justify-center mt-8">
-            <div className="flex items-center gap-2 text-white">
-              <span className="text-base">With</span>
-              <Heart className="w-5 h-5 text-red-500 fill-red-500" />
-              <span className="text-base">from NYC</span>
-            </div>
-          </div>
           {/* Drops delivered text */}
           <div className="flex justify-center mt-2 mb-0">
             <span className="text-sm font-bold text-white text-center">
