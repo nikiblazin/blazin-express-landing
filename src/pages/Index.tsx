@@ -7,21 +7,11 @@ import CounterAnimation from "@/components/CounterAnimation";
 const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Mobile Header - Normal header that scrolls with content */}
-      <div className="lg:hidden flex justify-between items-center p-4 pt-8 bg-black">
-        <h1 className="text-2xl font-black text-white">BLAZIN</h1>
-        <Button 
-          className="bg-white text-black hover:bg-gray-100 transition-all duration-300 px-4 py-2 rounded-full text-sm font-semibold"
-          onClick={() => window.open('https://apps.apple.com/', '_blank')}
-        >
-          Get the app
-        </Button>
-      </div>
-
       {/* Mobile Layout */}
-      <div className="lg:hidden px-4 min-h-screen">
-        {/* Main Headline */}
-        <div className="text-center mb-6 mt-4">
+      <div className="lg:hidden px-4 min-h-screen pt-8 pb-24">
+        {/* Main Headline with BLAZIN */}
+        <div className="text-center mb-6">
+          <h1 className="text-4xl font-black text-white mb-2">BLAZIN</h1>
           <h2 className="font-bold leading-tight text-white" style={{ fontSize: '39px' }}>
             XPRESS<br />YOURSELF
           </h2>
@@ -42,15 +32,12 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Download Buttons */}
-        <DownloadButtons variant="buttons" />
-
-        {/* "With ❤️ from NY" */}
+        {/* "With ❤️ from NYC" */}
         <div className="flex justify-center mt-8 mb-4">
           <div className="flex items-center gap-2 text-white">
             <span className="text-sm">With</span>
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-            <span className="text-sm">from NY</span>
+            <span className="text-sm">from NYC</span>
           </div>
         </div>
 
@@ -60,6 +47,16 @@ const Index = () => {
             🔥 <CounterAnimation targetNumber={10000} />+ drops delivered across the city.
           </span>
         </div>
+      </div>
+
+      {/* Floating Get the app button - Mobile only */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-black to-transparent z-50">
+        <Button 
+          className="w-full bg-white text-black hover:bg-gray-100 transition-all duration-300 py-6 rounded-full text-lg font-semibold"
+          onClick={() => window.open('https://apps.apple.com/', '_blank')}
+        >
+          Get the app
+        </Button>
       </div>
 
       {/* Desktop Hero Section */}
