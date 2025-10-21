@@ -38,7 +38,7 @@ export const FitsCarousel = () => {
           <div style={{ 
             position: 'relative',
             width: '100%',
-            maxWidth: '360px',
+            maxWidth: '480px',
             aspectRatio: '3/4',
             margin: '0 auto',
           }}>
