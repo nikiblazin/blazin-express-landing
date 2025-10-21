@@ -32,7 +32,7 @@ export const FitsCarousel = () => {
             opacity: index === currentIndex ? 1 : 0,
           }}
         >
-          <div className="relative aspect-[3/4] w-full max-w-[280px] md:max-w-[360px] mx-auto">
+          <div className="relative aspect-[3/4] w-full max-w-[360px] md:max-w-[480px] mx-auto">
             <img
               src={image}
               alt={`Fit ${index + 1}`}
