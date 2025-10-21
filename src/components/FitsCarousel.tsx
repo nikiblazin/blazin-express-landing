@@ -43,6 +43,8 @@ export const FitsCarousel = () => {
                 borderRadius: '24px',
                 overflow: 'hidden',
                 boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                transform: 'translateZ(0)', // Force GPU rendering
+                WebkitMaskImage: '-webkit-radial-gradient(white, white)', // Safari fix
               }}
             >
               <img
@@ -50,7 +52,7 @@ export const FitsCarousel = () => {
                 alt={`Fit ${index + 1}`}
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 style={{
-                  borderRadius: '24px',
+                  borderRadius: 'inherit',
                 }}
               />
             </div>
