@@ -24,7 +24,7 @@ export const FitsCarousel = () => {
   }, []);
 
   return (
-    <div className="w-full h-[500px] md:h-[700px] relative">
+    <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative">
       {fitImages.map((image, index) => (
         <div
           key={index}
@@ -35,12 +35,33 @@ export const FitsCarousel = () => {
             pointerEvents: currentIndex === index ? 'auto' : 'none',
           }}
         >
-          <div className="w-full max-w-[400px] mx-auto">
-            <div className="w-full rounded-3xl overflow-hidden shadow-2xl" style={{ aspectRatio: '3/4' }}>
+          <div style={{ 
+            width: '100%', 
+            maxWidth: '480px', 
+            margin: '0 auto' 
+          }}>
+            <div 
+              style={{ 
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '133.33%',
+                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                borderRadius: '24px',
+                overflow: 'hidden',
+              }}
+            >
               <img
                 src={image}
                 alt={`Fit ${index + 1}`}
-                className="w-full h-full object-cover block"
+                style={{
+                  position: 'absolute',
+                  top: '0',
+                  left: '0',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block',
+                }}
               />
             </div>
           </div>
