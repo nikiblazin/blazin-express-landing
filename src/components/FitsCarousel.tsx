@@ -24,7 +24,7 @@ export const FitsCarousel = () => {
   }, []);
 
   return (
-    <div className="w-full h-[500px] md:h-[600px] overflow-hidden relative">
+    <div className="w-full h-[500px] md:h-[700px] relative">
       {fitImages.map((image, index) => (
         <div
           key={index}
